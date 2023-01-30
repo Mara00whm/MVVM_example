@@ -10,9 +10,17 @@
 		79FF11D7298856F40019EC1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF11D6298856F40019EC1E /* AppDelegate.swift */; };
 		79FF11D9298856F40019EC1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF11D8298856F40019EC1E /* SceneDelegate.swift */; };
 		79FF11DB298856F40019EC1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF11DA298856F40019EC1E /* ViewController.swift */; };
-		79FF11DE298856F40019EC1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FF11DC298856F40019EC1E /* Main.storyboard */; };
 		79FF11E0298856F90019EC1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FF11DF298856F90019EC1E /* Assets.xcassets */; };
 		79FF11E3298856F90019EC1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FF11E1298856F90019EC1E /* LaunchScreen.storyboard */; };
+		79FF11F2298878250019EC1E /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF11F1298878250019EC1E /* JSONParameterEncoder.swift */; };
+		79FF11F4298878420019EC1E /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF11F3298878420019EC1E /* ParameterEncoder.swift */; };
+		79FF11F6298878580019EC1E /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF11F5298878580019EC1E /* URLParameterEncoder.swift */; };
+		79FF11F9298878920019EC1E /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF11F8298878920019EC1E /* NetworkErrors.swift */; };
+		79FF11FB298878F30019EC1E /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF11FA298878F30019EC1E /* EndPointProtocol.swift */; };
+		79FF11FD2988790F0019EC1E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF11FC2988790F0019EC1E /* HTTPMethod.swift */; };
+		79FF11FF298879340019EC1E /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF11FE298879340019EC1E /* HTTPTask.swift */; };
+		79FF12012988795E0019EC1E /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF12002988795E0019EC1E /* NetworkRouter.swift */; };
+		79FF1203298879910019EC1E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF1202298879910019EC1E /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +28,18 @@
 		79FF11D6298856F40019EC1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79FF11D8298856F40019EC1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		79FF11DA298856F40019EC1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		79FF11DD298856F40019EC1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79FF11DF298856F90019EC1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79FF11E2298856F90019EC1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79FF11E4298856F90019EC1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79FF11F1298878250019EC1E /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		79FF11F3298878420019EC1E /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		79FF11F5298878580019EC1E /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		79FF11F8298878920019EC1E /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		79FF11FA298878F30019EC1E /* EndPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
+		79FF11FC2988790F0019EC1E /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		79FF11FE298879340019EC1E /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		79FF12002988795E0019EC1E /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		79FF1202298879910019EC1E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,79 @@
 		79FF11D5298856F40019EC1E /* MVVM_example */ = {
 			isa = PBXGroup;
 			children = (
+				79FF11EA2988697A0019EC1E /* NetworkManager */,
 				79FF11D6298856F40019EC1E /* AppDelegate.swift */,
 				79FF11D8298856F40019EC1E /* SceneDelegate.swift */,
 				79FF11DA298856F40019EC1E /* ViewController.swift */,
-				79FF11DC298856F40019EC1E /* Main.storyboard */,
 				79FF11DF298856F90019EC1E /* Assets.xcassets */,
 				79FF11E1298856F90019EC1E /* LaunchScreen.storyboard */,
 				79FF11E4298856F90019EC1E /* Info.plist */,
 			);
 			path = MVVM_example;
+			sourceTree = "<group>";
+		};
+		79FF11EA2988697A0019EC1E /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				79FF11F0298878030019EC1E /* Manager */,
+				79FF11EF298877FD0019EC1E /* Service */,
+				79FF11EE298877EE0019EC1E /* Models */,
+				79FF11ED298877E70019EC1E /* Error */,
+				79FF11EC298877E00019EC1E /* EndPoint */,
+				79FF11EB298877DC0019EC1E /* Encoder */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		79FF11EB298877DC0019EC1E /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				79FF11F1298878250019EC1E /* JSONParameterEncoder.swift */,
+				79FF11F3298878420019EC1E /* ParameterEncoder.swift */,
+				79FF11F5298878580019EC1E /* URLParameterEncoder.swift */,
+			);
+			path = Encoder;
+			sourceTree = "<group>";
+		};
+		79FF11EC298877E00019EC1E /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		79FF11ED298877E70019EC1E /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				79FF11F8298878920019EC1E /* NetworkErrors.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		79FF11EE298877EE0019EC1E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		79FF11EF298877FD0019EC1E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				79FF11FA298878F30019EC1E /* EndPointProtocol.swift */,
+				79FF11FC2988790F0019EC1E /* HTTPMethod.swift */,
+				79FF11FE298879340019EC1E /* HTTPTask.swift */,
+				79FF12002988795E0019EC1E /* NetworkRouter.swift */,
+				79FF1202298879910019EC1E /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		79FF11F0298878030019EC1E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +207,6 @@
 			files = (
 				79FF11E3298856F90019EC1E /* LaunchScreen.storyboard in Resources */,
 				79FF11E0298856F90019EC1E /* Assets.xcassets in Resources */,
-				79FF11DE298856F40019EC1E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +217,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79FF11F2298878250019EC1E /* JSONParameterEncoder.swift in Sources */,
+				79FF12012988795E0019EC1E /* NetworkRouter.swift in Sources */,
 				79FF11DB298856F40019EC1E /* ViewController.swift in Sources */,
+				79FF11F6298878580019EC1E /* URLParameterEncoder.swift in Sources */,
+				79FF1203298879910019EC1E /* Router.swift in Sources */,
+				79FF11F9298878920019EC1E /* NetworkErrors.swift in Sources */,
+				79FF11FB298878F30019EC1E /* EndPointProtocol.swift in Sources */,
+				79FF11FD2988790F0019EC1E /* HTTPMethod.swift in Sources */,
+				79FF11FF298879340019EC1E /* HTTPTask.swift in Sources */,
 				79FF11D7298856F40019EC1E /* AppDelegate.swift in Sources */,
+				79FF11F4298878420019EC1E /* ParameterEncoder.swift in Sources */,
 				79FF11D9298856F40019EC1E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +235,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		79FF11DC298856F40019EC1E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79FF11DD298856F40019EC1E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		79FF11E1298856F90019EC1E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +372,6 @@
 				INFOPLIST_FILE = MVVM_example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +399,6 @@
 				INFOPLIST_FILE = MVVM_example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
