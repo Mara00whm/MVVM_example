@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		799349982989EC14005DA571 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799349972989EC14005DA571 /* ColorExtension.swift */; };
 		79D1FA10298920AB00469B61 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1FA0F298920AB00469B61 /* NetworkManager.swift */; };
 		79D1FA122989210400469B61 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1FA112989210400469B61 /* Endpoint.swift */; };
 		79D1FA142989214C00469B61 /* EndpointConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1FA132989214C00469B61 /* EndpointConstants.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		799349972989EC14005DA571 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		79D1FA0F298920AB00469B61 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		79D1FA112989210400469B61 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		79D1FA132989214C00469B61 /* EndpointConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointConstants.swift; sourceTree = "<group>"; };
@@ -75,6 +77,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		799349962989EB3B005DA571 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				79FF11EA2988697A0019EC1E /* NetworkManager */,
+				79D1FA332989E61300469B61 /* JSONDataCacheManager */,
+				79D1FA302989DC0D00469B61 /* ImageLoaderManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		79D1FA15298922FA00469B61 /* AlbumsModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				79D1FA2E2989A5EF00469B61 /* ImageExtension.swift */,
+				799349972989EC14005DA571 /* ColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -186,13 +199,11 @@
 		79FF11D5298856F40019EC1E /* MVVM_example */ = {
 			isa = PBXGroup;
 			children = (
-				79D1FA332989E61300469B61 /* JSONDataCacheManager */,
-				79D1FA302989DC0D00469B61 /* ImageLoaderManager */,
+				799349962989EB3B005DA571 /* Managers */,
 				79D1FA2D2989A5DA00469B61 /* Extensions */,
 				79D1FA1F29892FC000469B61 /* AlbumsView */,
 				79D1FA1A2989263400469B61 /* MVVMSettings */,
 				79D1FA162989256100469B61 /* AppDefaultFiles */,
-				79FF11EA2988697A0019EC1E /* NetworkManager */,
 				79FF11DF298856F90019EC1E /* Assets.xcassets */,
 				79FF11E1298856F90019EC1E /* LaunchScreen.storyboard */,
 				79FF11E4298856F90019EC1E /* Info.plist */,
@@ -341,6 +352,7 @@
 				79D1FA352989E62300469B61 /* JSONCacheManager.swift in Sources */,
 				79D1FA1C2989264200469B61 /* Observable.swift in Sources */,
 				79D1FA122989210400469B61 /* Endpoint.swift in Sources */,
+				799349982989EC14005DA571 /* ColorExtension.swift in Sources */,
 				79FF11F2298878250019EC1E /* JSONParameterEncoder.swift in Sources */,
 				79FF12012988795E0019EC1E /* NetworkRouter.swift in Sources */,
 				79D1FA10298920AB00469B61 /* NetworkManager.swift in Sources */,

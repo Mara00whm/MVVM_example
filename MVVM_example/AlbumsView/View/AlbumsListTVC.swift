@@ -34,7 +34,7 @@ class AlbumsListTVC: UITableViewController {
         
     }
     
-    private func createAlertView(model: AlbumsViewModelData, indexPath: Int) {
+    private func createAlertView(model: AlbumsViewModelData) {
         alert = UIAlertController(title: title, message: ViewTextConstants.enterText,
                                   preferredStyle: .alert)
         let title = model.title
@@ -50,7 +50,8 @@ class AlbumsListTVC: UITableViewController {
         alert.addAction(UIAlertAction(title: ViewTextConstants.save,
                                       style: .default, handler: { [self, weak alert] (_) in
             let textField = alert?.textFields![0]
-            viewModel.setNewValue((textField?.text)!, model: model)
+            guard let value = textField?.text else { return }
+            viewModel.setNewValue(value, model: model)
         }))
         
         if self.searchController.isActive {
@@ -67,7 +68,7 @@ class AlbumsListTVC: UITableViewController {
     
     private func tableViewSettings() {
         tableView.register(AlbumsTVCell.self, forCellReuseIdentifier: AlbumsTVCell.reuseIdentifier)
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .backgroundColor
     }
     //MARK: - Override funcs
     
@@ -106,7 +107,7 @@ class AlbumsListTVC: UITableViewController {
                 let mapAction = UIAction(
                     title: ViewTextConstants.edit,
                     image: UIImage.editImage) { _ in
-                        self.createAlertView(model: self.viewModel.items.value[index], indexPath: index)
+                        self.createAlertView(model: self.viewModel.items.value[index])
                     }
                 let shareAction = UIAction(
                     title: ViewTextConstants.close,
