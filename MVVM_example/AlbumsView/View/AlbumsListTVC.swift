@@ -112,13 +112,14 @@ class AlbumsListTVC: UITableViewController {
                 let shareAction = UIAction(
                     title: ViewTextConstants.close,
                     image: UIImage.closeImage) { _ in
+                        self.viewModel.deleteRow(self.viewModel.items.value[index])
                     }
                 return UIMenu(title: "", image: nil, children: [mapAction, shareAction])
             }
     }
     
     private enum ViewTextConstants {
-        static let close: String = "Close"
+        static let close: String = "Hide"
         static let edit: String = "Edit"
         
         static let enterText: String = "Enter text"

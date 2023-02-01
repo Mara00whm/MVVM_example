@@ -13,6 +13,7 @@ protocol AlbumsViewModelProtocol {
     func getListOfAlbums()
     func searchAtTableView(_ text: String)
     func setNewValue(_ text: String, model: AlbumsViewModelData)
+    func deleteRow(_ model: AlbumsViewModelData)
 }
 
 class AlbumsViewModel: AlbumsViewModelProtocol {
@@ -59,7 +60,7 @@ class AlbumsViewModel: AlbumsViewModelProtocol {
             // обработка ошибок при небоходимости
         }
     }
-    
+
     func getCachedModel() {
         let path = URL(fileURLWithPath: NSTemporaryDirectory())
         let disk = DiskStorage(path: path)
@@ -91,6 +92,15 @@ class AlbumsViewModel: AlbumsViewModelProtocol {
         for i in 0..<listOfAlbums.count {
             if listOfAlbums[i] == model {
                 listOfAlbums[i].title = text
+                return
+            }
+        }
+    }
+    
+    func deleteRow(_ model: AlbumsViewModelData) {
+        for i in 0..<listOfAlbums.count {
+            if listOfAlbums[i] == model {
+                listOfAlbums.remove(at: i)
                 return
             }
         }
