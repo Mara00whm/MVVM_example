@@ -8,13 +8,14 @@
 import Foundation
 
 protocol NetworkManagerProtocol {
-    func getListOfAlbums()
+    func getListOfAlbums() async -> Result<PlayListDTO, RequestError>
 }
 
 class NetworkManager: NetworkManagerProtocol {
     private let networkRouter = Router<AlbumsEndpoint>()
     
-    func getListOfAlbums() {
+    func getListOfAlbums() async -> Result<PlayListDTO, RequestError> {
+        await networkRouter.request(endpoint: .getListOfAlbums, responseModel: PlayListDTO.self)
     }
 
 }
