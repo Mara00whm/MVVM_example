@@ -25,7 +25,7 @@ class AlbumsTVCell: UITableViewCell {
     private let albumTitle: UILabel = {
        let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .black
+        view.textColor = .titleForegroundColor
         view.text = "title"
         return view
     }()
@@ -34,7 +34,7 @@ class AlbumsTVCell: UITableViewCell {
        let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = "subtitle"
-        view.textColor = .systemGray
+        view.textColor = .subtitleForegroundColor
         return view
     }()
     
@@ -50,6 +50,7 @@ class AlbumsTVCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.createAnchors()
+        contentView.backgroundColor = .backgroundColor
     }
     
     required init?(coder: NSCoder) {
